@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // Connect to MongoDB
 mongoose.connect(`mongodb://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@localhost:27017/retours`, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connecté'))
-  .catch(err => console.error('Erreur de connexion à MongoDB', err));
+  .catch(err => console.error('Erreur de connexion à MongoDB :', err));
 
 app.get('/', (req, res) => {
   res.send('Bienvenue sur la plateforme Retours Utilisateurs!');
