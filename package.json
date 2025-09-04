@@ -1,7 +1,7 @@
 {
   "name": "retours-utilisateurs",
   "version": "1.0.0",
-  "description": "Une plateforme pour collecter et analyser les retours des utilisateurs",
+  "description": "A platform to collect and analyze user feedback",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
