@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://username:password@localhost:27017/retours', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(`mongodb://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@localhost:27017/retours`, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connecté'))
   .catch(err => console.error('Erreur de connexion à MongoDB', err));
 
